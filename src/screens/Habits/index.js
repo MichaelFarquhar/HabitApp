@@ -2,17 +2,21 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
+import HabitsHeader from './Header';
 
-const Home = () => {
+const Habits = ({ navigation }) => {
     return (
-        <View style={styles.container}>
-            <Text>Home Page</Text>
-            <StatusBar style="auto" />
-        </View>
+        <React.Fragment>
+            <HabitsHeader navigation={navigation} />
+            <View style={styles.container}>
+                <Text>Habits Page</Text>
+                <StatusBar style="auto" />
+            </View>
+        </React.Fragment>
     );
 };
 
-export default Home;
+export default Habits;
 
 const styles = StyleSheet.create({
     container: {
