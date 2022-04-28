@@ -2,13 +2,17 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
+import SettingsHeader from './Header';
 
 const Settings = () => {
     return (
-        <View style={styles.container}>
-            <Text>Settings Page</Text>
-            <StatusBar style="auto" />
-        </View>
+        <React.Fragment>
+            <SettingsHeader />
+            <View style={styles.container}>
+                <Text>Settings Page</Text>
+                <StatusBar style="auto" />
+            </View>
+        </React.Fragment>
     );
 };
 
