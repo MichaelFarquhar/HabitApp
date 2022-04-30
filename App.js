@@ -11,6 +11,7 @@ import Habits from './src/screens/Habits';
 import Stats from './src/screens/Stats';
 import Settings from './src/screens/Settings';
 import NewHabit from './src/screens/NewHabit';
+import { StatusBar } from 'expo-status-bar';
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -66,6 +67,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <PaperProvider theme={theme}>
+                <StatusBar style="light" backgroundColor="#26418f" />
                 <Stack.Navigator>
                     <Stack.Screen
                         name="TabPages"
